@@ -1,6 +1,6 @@
 # DBS_Project_6
-INSTRUCTIONS/n
-1.extract folder from zip./n
+INSTRUCTIONS
+1.extract folder from zip.
 2.Make sure node is installed by typing node –v in cmd.
 3.copy  DBS_PR_06_SQL_2020A7PS0975P.sql file contents in MySQL Workbench (make sure username is set to ‘root’ and password to ‘1234’ . Query for this is already written in the .mysql file)
 [For reference queries
