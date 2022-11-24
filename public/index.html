@@ -1,0 +1,419 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+   
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/3569aa9baa.js" crossorigin="anonymous"></script>
+  <base href="/">
+  <link  href="./css/style.css">
+  <!-- <script src="action.js"> -->
+    
+    
+</script>
+
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#" style="margin-left: 80px;"><h1>Hospital</h1></a>
+    
+    <!-- Links -->
+    <ul class="navbar-nav container-fluid" style="justify-content: end;">
+      <li class="nav-item">
+        <a class="nav-link" href="#mid" ><b>Log In</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#admin"><b>Admin</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#foot"><b>Links</b></a>
+      </li>
+    </ul>
+  </nav>
+
+
+
+  <div>
+<section style="padding: 10px 50px;" id="s1" >
+  <h4>Register / Login</h4>
+  <p>Already have an account? Login.</p>
+  <div class="row" ><div class="col-md-6"><img class="img" src="css/i2.png"></div>
+  <div class="container col-md-6">
+    <form action="" id="regp">
+      <h3 style="text-align: center;">Register here</h3>
+      <div class="row">
+        <div class="col-25">
+          <label for="fname">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="namep" name="namep" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="gender">Gender</label>
+        </div>
+        
+        <div class="col-75">
+          <select id="genderp" name="genderp">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="age">Age</label>
+        </div>
+        <div class="col-75">
+          <input type="number" id="agep" name="agep" placeholder="Your age..">
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="col-25">
+          <label for="id">Address</label>
+        </div>
+        <div class="col-75">
+          <input type="text" id="addressp" name="addressp" placeholder="Your address..">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="">E-mail</label>
+        </div>
+        <div class="col-75">
+          <input type="email" id="mailp" name="mailp" placeholder="Your mail..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="">Password</label>
+        </div>
+        <div class="col-75" style="margin-bottom: 50px;">
+          <input type="password" id="passp" name="passp" placeholder="Your password..">
+        </div>
+      </div>
+     
+      <div class="row">
+        <button id="b11">Submit</button>
+      </div>
+    </form>
+  </div></div>
+
+</div>
+
+
+  <div ><section class="container-fluid" id="mid" >
+    <!-- patient login -->
+    <div class="container-fluid col-md-6" style="background-color: #f2f2f2; padding-top: 15px;">
+      <form id="plogin_form" >
+        <h3 style="text-align: center;">Login here</h3>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="mail">E-Mail</label>
+          </div>
+          <div class="col-75">
+            <input type="email" id="lmail" name="lname" placeholder="Your email..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lpass">Password</label>
+          </div>
+          <div class="col-75">
+            <input type="password" id="lpass" name="lname" placeholder="Your password..">
+          </div>
+        </div>
+       
+        <div class="row">
+          <div class="lbtn" style="text-align: center;" onclick="submitlogin()">Submit</div>
+        </div>
+      </form>
+    </div></div>
+
+
+
+    <div style="margin:50px 50px 50px 150px;"> 
+      <div class="slider-container" style="margin:px;width:90% ;height :70%;; align-items: center;">
+     <div class="left-slides">
+         <div style="background-color: #353b48;">
+             <h3>Labs</h3>
+             <p>high qualilty.</p>
+         </div>
+ 
+       
+ 
+         <div style="background-color: #4bcffa;">
+             <h3 style="text-align: center;">Equipment</h3>
+             <p>world class.</p>
+         </div>
+ 
+         <div style="background-color: #218c74;">
+             <h3>Doctors</h3>
+             <p>highly professional</p>
+         </div>
+ 
+         
+     </div>
+ 
+     <div class="right-slides">
+         <div style="background-image: url('css/c1.png');">
+         </div>
+ 
+         <div style="background-image: url('css/c2.png');">
+         </div>
+ 
+         <div style="background-image: url('css/c3.png');">
+         </div>
+ 
+       
+     </div>
+ 
+     <div class="buttons">
+         <button class="left-btn">
+             <i class="fas fa-arrow-down"></i>
+         </button>
+         <button class="right-btn">
+             <i class="fas fa-arrow-up"></i>
+         </button>
+     </div>
+ </div></div>
+
+
+
+     <!-- admin login -->
+    <div style="margin-top: 50px;" id="admin">
+    <div class="container-fluid col-md-6" style="background-color: #f2f2f2; padding-top: 10px;">
+      <form id="alogin_form" >
+        <h3 style="text-align: center;">Admin Login only</h3>
+
+        <div class="row">
+          <div class="col-25">
+            <label for="mail">Username</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="aduser" name="name" placeholder="admin">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lpass">Password</label>
+          </div>
+          <div class="col-75">
+            <input type="password" id="adpass" name="name" placeholder="123">
+          </div>
+        </div>
+       
+        <div class="row">
+          <div id="adbtn"class="lbtn" style="text-align: center;" onclick="validate()">Submit</div>
+        </div>
+      </form>
+      <p> USERNAME :admin ; PASSWORD :123</p>
+    </div></div>
+
+
+    <div>..</div>
+    <div id="foot">
+      <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-dark"
+          style="background-color: #ECEFF1"
+          >
+    <!-- Section: Social media -->
+    <section
+             class="d-flex justify-content-between p-4 text-white"
+             style="background-color: #21D192"
+             >
+      <!-- Left -->
+      <div class="me-5">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h2 class="text-uppercase fw-bold">HOSPITAL</h2>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Outlets</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#" class="text-dark">Main Branch</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Branch B</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Branch C</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Branch D</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Useful links</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p>
+              <a href="#" class="text-dark">Your Account</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Become an Affiliate</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Shipping Rates</a>
+            </p>
+            <p>
+              <a href="#" class="text-dark">Help</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+                />
+            <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+            <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2020 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/"
+         >MDBootstrap.com</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
+    </div>
+  
+  
+  </section></div>
+
+   <button id="b1" onclick="" style="display: none;">ok</button>
+    <table class="" style="display: none;">
+        <thead>
+            <tr>
+                <th>login</th> 
+                <th>Password</th>
+            </tr>
+        </thead>
+        <table id="#t1">
+
+        </table>
+
+    </table> 
+
+    <form action="#" id="login_form" style="display: none;">
+        <label for="fname">Id:</label><br>
+        <input type="number" id="id" name="fname" value=0><br>
+        <label for="lname">Password:</label><br>
+        <input type="text" id="password" name="pass" value="Doe"><br><br>
+        <button id="testbtn">Submit</button>
+      </form>   
+
+  
+</section></section>
+  
+
+
+
+
+
+
+
+      
+      <script src="./js/action.js"></script>
+</body>
+</html>
